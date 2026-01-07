@@ -58,5 +58,3 @@ variable "subnet_name" {
  type = string
  default = "private-subnet"
 }
-
-hc_name //"http-hc"
