@@ -15,6 +15,8 @@ module "nat" {
 
 module "compute" {
  source = "./modules/compute"
+ vm_name = var.vm_name
+ machine_type = var.machine_type
  subnet_id = module.network.subnet_id
  zone = var.zone
 }
