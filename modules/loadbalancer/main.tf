@@ -10,7 +10,7 @@ resource "google_compute_instance_group" "group" {
 }
 
 resource "google_compute_health_check" "hc" {
- name = hc_name //"http-hc"
+ name = var.hc_name //"http-hc"
 
  http_health_check {
   port = 80
