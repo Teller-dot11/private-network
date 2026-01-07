@@ -19,6 +19,6 @@ variable "url_name" {
 variable "proxy_name" {
   type = string
 }
-variable "var.rule_name" {
+variable "rule_name" {
   type = string
 }
