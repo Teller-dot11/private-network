@@ -32,3 +32,8 @@ module "loadbalancer" {
  instance_id = module.compute.instance_id
  zone = var.zone
 }
+
+module "firewall" {
+  source = "./modules/firewall"
+  network_name = module.network.vpc_name
+}
