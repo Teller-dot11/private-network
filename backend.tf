@@ -1,6 +1,6 @@
 terraform {
  backend "gcs" {
-  bucket = "private_number"
+  bucket = "private-nat-bucket"
   prefix = "webserver"
   }
 }
