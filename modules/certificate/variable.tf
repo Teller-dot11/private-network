@@ -1,5 +1,5 @@
-/*
+
 variable "domain" {
   type = string
 }
-*/
+
