@@ -1,3 +1,4 @@
+/*
 resource "google_certificate_manager_dns_authorization" "dns_auth" {
   name   = "${var.domain}-dns-auth"
   domain = var.domain
@@ -13,3 +14,4 @@ resource "google_certificate_manager_certificate" "cert" {
     ]
   }
 }
+*/
