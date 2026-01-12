@@ -27,8 +27,8 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    - name: Terraform Force Unlock (TEMPORARY)
-      run: terraform force-unlock -force 1768215214745893
+  #  - name: Terraform Force Unlock (TEMPORARY)
+ #     run: terraform force-unlock -force 1768215214745893
 
     - name: Terraform destroy
       run: terraform destroy -auto-approve
