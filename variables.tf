@@ -58,11 +58,11 @@ variable "subnet_name" {
  type = string
  default = "private-subnet"
 }
-/*
+
 variable "domain" {
   type        = string
   description = "Domain name for HTTPS certificate"
   default     = "web.yourdomain.com"
-  // domain = "example.yourdomain.com"
+  // domain = "web.private-vpc.internal"
 }
-*/
+
