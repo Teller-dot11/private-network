@@ -47,7 +47,7 @@ resource "google_compute_global_forwarding_rule" "rule" {
  target = google_compute_target_http_proxy.proxy.id
  port_range = "80"
 }
-
+/*
 resource "google_certificate_manager_certificate" "https_cert" {
   name     = "web-cert"
   description = "Managed certificate for web LB"
@@ -55,7 +55,14 @@ resource "google_certificate_manager_certificate" "https_cert" {
     domains = [var.domain]
   }
 }
-
+*/
+resource "google_compute_managed_ssl_certificate" "managed_cert" {
+  name = "web-managed-cert"
+  
+  managed {
+    domains = [var.domain]  # <- Your public domain here
+  }
+}
 resource "google_compute_target_https_proxy" "https_proxy" {
   name             = "https-proxy"
   url_map          = google_compute_url_map.map.id
