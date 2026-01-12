@@ -52,7 +52,7 @@ resource "google_certificate_manager_certificate" "https_cert" {
   name     = "web-cert"
   description = "Managed certificate for web LB"
   managed {
-    domains = [var.domain]
+    domain = [var.domain]
   }
 }
 
