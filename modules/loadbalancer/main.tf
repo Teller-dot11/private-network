@@ -7,6 +7,10 @@ resource "google_compute_instance_group" "group" {
   name = "http"
   port = 80
   }
+ named_port {
+  name = "https"
+  port = 443
+  }
 }
 
 resource "google_compute_health_check" "hc" {
