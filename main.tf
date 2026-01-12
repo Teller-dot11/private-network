@@ -21,6 +21,7 @@ module "compute" {
  zone = var.zone
 }
 
+/*
 module "loadbalancer" {
  source = "./modules/loadbalancer"
  group_name = var.group_name
@@ -32,6 +33,7 @@ module "loadbalancer" {
  instance_id = module.compute.instance_id
  zone = var.zone
 }
+*/
 
 module "firewall" {
   source = "./modules/firewall"
