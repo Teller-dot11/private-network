@@ -58,3 +58,8 @@ variable "subnet_name" {
  type = string
  default = "private-subnet"
 }
+
+variable "domain" {
+  type        = string
+  description = "Domain name for HTTPS certificate"
+}
