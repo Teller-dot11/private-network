@@ -1,7 +1,8 @@
 
 resource "google_compute_firewall" "allow_lb_http" {
   name = "allow-lb-http"
-  network = var.network_name
+ // network = var.network_name
+  network = var.network_id
 
   direction = "INGRESS"
   priority = 1000
