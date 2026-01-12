@@ -63,6 +63,6 @@ variable "domain" {
   type        = string
   description = "Domain name for HTTPS certificate"
   default     = "web.yourdomain.com"
-  // domain = "web.private-vpc"
+  // domain = "myapp.example.net"
 }
 
