@@ -48,6 +48,12 @@ resource "google_compute_global_forwarding_rule" "rule" {
  port_range = "80"
 }
 
+resource "google_compute_target_https_proxy" "https_proxy" {
+  name             = "https-proxy"
+  url_map          = google_compute_url_map.map.id
+  // ssl_certificates = [google_compute_managed_ssl_certificate.managed_cert.id]
+}
+
 resource "google_compute_global_forwarding_rule" "https_rule" {
   name       = "${var.rule_name}-https"
   target    = google_compute_target_https_proxy.https_proxy.id
