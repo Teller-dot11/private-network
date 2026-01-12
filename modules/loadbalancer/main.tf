@@ -69,6 +69,10 @@ resource "google_compute_target_https_proxy" "https_proxy" {
   ssl_certificates = [google_compute_managed_ssl_certificate.managed_cert.id]
 }
 
+resource "google_compute_global_address" "lb_ip" {
+  name = "web-lb-ip"
+}
+
 resource "google_compute_global_forwarding_rule" "https_rule" {
   name       = "${var.rule_name}-https"
   target    = google_compute_target_https_proxy.https_proxy.id
