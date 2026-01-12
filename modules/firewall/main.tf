@@ -22,7 +22,8 @@ resource "google_compute_firewall" "allow_lb_http" {
 ############################################
 resource "google_compute_firewall" "allow_lb_https" {
   name    = "allow-lb-https"
-  network = var.network_name
+ // network = var.network_name
+  network = var.network_id
 
   direction = "INGRESS"
   priority  = 1000
@@ -42,7 +43,8 @@ resource "google_compute_firewall" "allow_lb_https" {
 ############################################
 resource "google_compute_firewall" "allow_internal" {
   name = "allow-internal"
-  network = var.network_name
+  network = var.network_id
+ // network = var.network_name
 
   direction = "INGRESS"
   priority = 1000
@@ -69,7 +71,8 @@ resource "google_compute_firewall" "allow_internal" {
 ############################################
 resource "google_compute_firewall" "allow_iap_ssh" {
   name = "allow-iap-ssh"
-  network = var.network_name
+  network = var.network_id
+//  network = var.network_name
 
   direction = "INGRESS"
   priority = 1000
