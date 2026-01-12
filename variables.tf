@@ -52,7 +52,7 @@ variable "nat_name" {
 }
 variable "vpc_name" {
  type = string
- default = "private-vpc"
+ default = "privatevpc-cert"
 }
 variable "subnet_name" {
  type = string
