@@ -30,15 +30,15 @@ jobs:
   #  - name: Terraform Force Unlock (TEMPORARY)
  #     run: terraform force-unlock -force 1768215214745893
 
-    - name: Terraform destroy
-      run: terraform destroy -auto-approve
+ #   - name: Terraform destroy
+ #     run: terraform destroy -auto-approve
 
-#    - name: Terraform Plan
-#      run: terraform plan
+    - name: Terraform Plan
+      run: terraform plan
 
- #   - name: Terraform Apply
+    - name: Terraform Apply
       # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-  #    run: terraform apply -auto-approve
+      run: terraform apply -auto-approve
 
  
   
