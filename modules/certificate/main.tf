@@ -6,7 +6,8 @@ resource "google_certificate_manager_dns_authorization" "dns_auth" {
 }
 
 resource "google_certificate_manager_certificate" "cert" {
-  name = "${var.domain}-cert"
+ //  name = "${var.domain}-cert"
+  name = substr(replace(var.domain, "/[^a-z0-9-]/", "-"), 0, 63)
 
   managed {
     domains = [var.domain]
