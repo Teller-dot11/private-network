@@ -58,5 +58,6 @@ module "loadbalancer" {
   instance_id   = module.compute.instance_id
   zone          = var.zone
 
+  domain       = var.domain
   certificate_id = module.certificate.certificate_id
 }
