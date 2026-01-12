@@ -66,5 +66,6 @@ resource "google_compute_global_forwarding_rule" "https_rule" {
   name       = "${var.rule_name}-https"
   target    = google_compute_target_https_proxy.https_proxy.id
   port_range = "443"
+  ip_address = google_compute_global_address.lb_ip.address
 }
 
