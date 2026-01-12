@@ -62,4 +62,5 @@ variable "subnet_name" {
 variable "domain" {
   type        = string
   description = "Domain name for HTTPS certificate"
+  domain = "example.yourdomain.com"
 }
