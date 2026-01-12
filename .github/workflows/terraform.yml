@@ -27,8 +27,8 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    - name: Force Unlock
-      run: terraform force-unlock -force ${{ github.event.inputs.lock_id }}
+    - name: Terraform Force Unlock (TEMPORARY)
+      run: terraform force-unlock -force 1768210617252761
 
     - name: Terraform destroy
       run: terraform destroy -auto-approve
