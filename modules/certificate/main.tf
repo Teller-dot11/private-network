@@ -1,6 +1,7 @@
 
 resource "google_certificate_manager_dns_authorization" "dns_auth" {
-  name   = "${var.domain}-dns-auth"
+  // name   = "${var.domain}-dns-auth"
+  substr(replace(var.domain, "/[^a-z0-9-]/", "-"), 0, 63)
   domain = var.domain
 }
 
