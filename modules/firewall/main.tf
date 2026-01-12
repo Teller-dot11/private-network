@@ -1,4 +1,4 @@
-/* 
+
 resource "google_compute_firewall" "allow_lb_http" {
   name = "allow-lb-http"
   network = var.network_name
@@ -15,7 +15,7 @@ resource "google_compute_firewall" "allow_lb_http" {
 
   target_tags = var.target_tags
 }
-*/
+/*
 ############################################
 # Allow HTTPS from Load Balancer
 ############################################
@@ -35,7 +35,7 @@ resource "google_compute_firewall" "allow_lb_https" {
 
   target_tags = var.target_tags
 }
-
+*/
 ############################################
 # Allow Internal VPC Traffic
 ############################################
