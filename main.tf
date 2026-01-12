@@ -37,3 +37,8 @@ module "firewall" {
   source = "./modules/firewall"
   network_name = module.network.vpc_name
 }
+
+module "certificate" {
+  source = "./modules/certificate"
+  domain = var.domain
+}
