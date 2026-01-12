@@ -40,12 +40,12 @@ module "firewall" {
  // network_name = module.network.vpc_name
   network_id = module.network.vpc_id
 }
-/*
+
 module "certificate" {
   source = "./modules/certificate"
   domain = var.domain
 }
-*/
+
 module "loadbalancer" {
   source = "./modules/loadbalancer"
 
@@ -58,5 +58,5 @@ module "loadbalancer" {
   instance_id   = module.compute.instance_id
   zone          = var.zone
 
- // certificate_id = module.certificate.certificate_id
+  certificate_id = module.certificate.certificate_id
 }
