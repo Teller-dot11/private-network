@@ -1,5 +1,11 @@
+/*
 variable "network_name" {
   description = "Name of the VPC network where firewall rules will be applied."
+  type = string
+}
+*/
+variable "network_id" {
+  description = "ID of the VPC network where firewall rules will be applied."
   type = string
 }
 
