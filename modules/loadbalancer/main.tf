@@ -58,7 +58,7 @@ resource "google_certificate_manager_certificate" "https_cert" {
 */
 resource "google_compute_managed_ssl_certificate" "managed_cert" {
   // name = "web-managed-cert"
-  name = replace(var.domain, "/[^a-z0-9-]/", "-")
+  name = substr(replace(var.domain, "/[^a-z0-9-]/", "-"), 0, 63)
   
   managed {
     domains = [var.domain]  # <- Your public domain here
