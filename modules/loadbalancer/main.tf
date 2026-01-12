@@ -1,7 +1,7 @@
 resource "google_compute_instance_group" "group" {
  name = var.group_name //"web-group"
  zone = var.zone
- instances = var.instance_id
+ instances = [var.instance_id]
 
  named_port {
   name = "http"
