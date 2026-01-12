@@ -22,3 +22,7 @@ variable "proxy_name" {
 variable "rule_name" {
   type = string
 }
+
+variable "certificate_id" {
+  type = string
+}
