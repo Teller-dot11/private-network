@@ -37,7 +37,8 @@ module "loadbalancer" {
 
 module "firewall" {
   source = "./modules/firewall"
-  network_name = module.network.vpc_name
+ // network_name = module.network.vpc_name
+  network_id = module.network.vpc_id
 }
 /*
 module "certificate" {
